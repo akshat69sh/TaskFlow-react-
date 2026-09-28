@@ -8,10 +8,10 @@ const MainLayout = () => {
       <div className="flex min-h-screen">
         <Sidebar />
 
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col p-6 gap-6">
           <Header />
 
-          <main className="flex-1 p-6">
+          <main className="flex flex-1 h-full  ">
             <Outlet />
           </main>
         </div>
