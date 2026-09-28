@@ -4,7 +4,7 @@ body {
     background-color: #5f8cda;
     margin: 0;
     padding: 0;
-    background-image: url(../public/background/bg-1.jpg);
+    background-image: url(/background/bg-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

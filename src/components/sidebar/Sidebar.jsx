@@ -1,85 +1,62 @@
-// import { useState } from "react";
-import { Icon } from "lucide-react";
 import { NavLink } from "react-router-dom";
-
-// const menuItems = [
-//   {
-//     id: "initialize",
-//     label: "Initialize project",
-//     icon: Flag,
-//   },
-//   {
-//     id: "plan",
-//     label: "Plan",
-//     icon: Layers,
-//   },
-//   {
-//     id: "execute",
-//     label: "Execute sprint",
-//     icon: ChartNoAxesGantt,
-//   },
-//   {
-//     id: "close",
-//     label: "Close and improve",
-//     icon: ChartNoAxesGantt,
-//   },
-//   {
-//     id: "operations",
-//     label: "Operations manage",
-//     icon: SlidersHorizontal,
-//   },
-// ];
-
-// const bottomMenuItems = [
-//   {
-//     label: "AI Assistant",
-//     icon: Sparkles,
-//   },
-//   {
-//     label: "Team",
-//     icon: Users,
-//   },
-//   {
-//     label: "Report",
-//     icon: ChartNoAxesColumnIncreasing,
-//   },
-//   {
-//     label: "Settings",
-//     icon: Settings,
-//   },
-// ];
+import {
+  UserPen,
+  Home,
+  UserGroup,
+  ClipboardPlus,
+  Settings,
+} from "lucide-react";
 
 function Sidebar() {
-  //   const [activeMenu, setActiveMenu] = useState("initialize");
-
   return (
-    <aside className="h-screen w-[280px] shrink-0 bg-white p-4">
-      <div className="flex items-center justify-between mb-4">
-        <NavLink to="/">
-          <button
-            type="button"
-            className={`flex h-[52px] w-full items-center justify-between rounded-2xl border px-4 transition-all border-blue-500 bg-transparent text-blue-600`}
+    <aside className="w-64 rounded-3xl p-3 m-3 gap-5 bg-white/10 shadow-2xl backdrop-blur-xl border border-white/30 shadow-black/60 flex flex-col justify-start items-center">
+      <div className="p-3 ">
+        <span className="flex items-center justify-center text-3xl font-extrabold">
+          Taskflow
+        </span>
+      </div>
+      <div className="flex flex-col w-full justify-between h-full">
+        <div className="flex items-center justify-between flex-col w-full gap-3">
+          <NavLink
+            to="/"
+            className="flex flex-row justify-center item w-full border border-white rounded-2xl p-2 hover:bg-blue-500/40 shadow-2xl backdrop-blur-2xl shadow-black/60 "
           >
-            <div className="flex items-center gap-3">
-              <Icon size={19} strokeWidth={1.7} />
-
-              <span className={`text-[15px] font-medium `}>Home</span>
+            <div className=" flex flex-row justify-center  items-center w-full   ">
+              <Home size={25} strokeWidth={1.5} />
+              <span className="text-xl">Home</span>
             </div>
-          </button>
-        </NavLink>
+          </NavLink>
 
-        <NavLink to="/profile">
-          <button
-            type="button"
-            className={`flex h-[52px] w-full items-center justify-between rounded-2xl border px-4 transition-all border-blue-500 bg-transparent text-blue-600`}
+          <NavLink
+            to="/profile"
+            className="flex flex-row justify-evenly w-full border border-white rounded-2xl p-2 hover:bg-blue-500/40 shadow-2xl backdrop-blur-2xl shadow-black/60 "
           >
-            <div className="flex items-center gap-3">
-              <Icon size={19} strokeWidth={1.7} />
-
-              <span className={`text-[15px] font-medium `}>Profile</span>
+            <div className=" flex flex-row justify-center gap-5 items-center w-full shadow-l backdrop-blur-l ">
+              <UserPen size={25} strokeWidth={1.5} />
+              <span className="text-xl">Profile</span>
             </div>
-          </button>
-        </NavLink>
+          </NavLink>
+        </div>
+        <div className="flex flex-col justify-evenly p-2.5 h-fit w-full gap-3   ">
+          <NavLink to="/">
+            <div className="flex w-full bg-transparent gap-2 items-center  ">
+              <UserGroup size={20} strokeWidth={1} />
+              <span className="text-lg">Team</span>
+            </div>
+          </NavLink>
+          <NavLink to="/">
+            <div className="flex w-full bg-transparent gap-2 items-center  ">
+              <ClipboardPlus size={20} strokeWidth={1} />
+              <span className="text-lg">Report</span>
+            </div>
+          </NavLink>
+          <NavLink to="/">
+            <div className="flex w-full bg-transparent gap-2 items-center  ">
+              <Settings size={20} strokeWidth={1} />
+              <span className="text-lg">Settings</span>
+            </div>
+          </NavLink>
+        </div>
       </div>
     </aside>
   );
