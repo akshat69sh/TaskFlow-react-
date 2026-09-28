@@ -6,12 +6,12 @@ function SidePanel() {
     {
       id: 1,
       label: "Home",
-      link: "#home",
+      link: "/MainSection",
     },
     {
       id: 2,
       label: "Task List",
-      link: "#Task List",
+      link: "/TaskList",
     },
     {
       id: 3,
@@ -31,12 +31,12 @@ function SidePanel() {
       link: "#Medium Priority",
     },
     {
-      id: 1,
+      id: 3,
       label: "Low Priority",
       link: "#Low Priority",
     },
     {
-      id: 1,
+      id: 4,
       label: "On Standby",
       link: "#On Standby",
     },
@@ -49,13 +49,13 @@ function SidePanel() {
       <div className="flex flex-col my-11 p-2 gap-3 border border-gray-50 border-dashed shadow-2xl rounded-2xl items-center">
         <span>Main</span>
         {mainButton.map((item) => (
-          <SidePanelButton key={item.id} label={item.label} href={item.link} />
+          <SidePanelButton key={item.id} label={item.label} to={item.link} />
         ))}
       </div>
       <div className="flex flex-col my-11 p-2 gap-3 border border-gray-50 border-dashed  rounded-2xl items-center">
         <span>Label</span>
         {labelButton.map((item) => (
-          <SidePanelButton key={item.key} label={item.label} href={item.link} />
+          <SidePanelButton key={item.key} label={item.label} to={item.link} />
         ))}
       </div>
     </div>

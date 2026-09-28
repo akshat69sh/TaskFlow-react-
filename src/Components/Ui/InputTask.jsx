@@ -8,7 +8,7 @@ function InputTask() {
       <span className="text-2xl pt-2">TASK :</span>
 
       <textarea
-        className="border border-gray-500 w-[50%] h-48 rounded-2xl p-4 bg-transparent outline-none resize-none"
+        className="border border-gray-500 w-[50%] h-48 rounded-2xl p-4 bg-transparent outline-none resize-none "
         placeholder="Enter your task details..."
       />
       <div className="flex flex-col justify-evenly items-center p-2.5">
