@@ -1,16 +1,24 @@
 import './App.css'
-import Header from './Components/Header/Header'
-
+import {  Route, Routes } from "react-router-dom"
+import MainLayout from './layouts/MainLayout'
+import Home from './pages/Home'
+import Profile from './pages/Profile'
 
 function App() {
   
 
   return (
-    
-    <div>
-      <Header/>
-    </div>
-    
+    <>
+    <Routes>
+      <Route element={<MainLayout/>}>
+
+        <Route path='/' element={<Home/>} />
+        <Route path='/profile' element={<Profile/>} />
+
+
+      </Route>
+    </Routes>
+    </>
   )
 }
 
