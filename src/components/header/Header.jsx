@@ -4,7 +4,7 @@ import { BellRing, MessageSquareText } from "lucide-react";
 function Header() {
   return (
     <>
-      <div className="w-full p-5 rounded-3xl px-10 flex flex-col justify-center items-center gap-3 md:flex md:flex-row md:justify-between bg-white/10 shadow-2xl backdrop-blur-xl border border-white/30 shadow-black/60">
+      <div className="w-full p-5 rounded-3xl px-10 flex flex-col justify-center items-center gap-3 md:flex md:flex-row md:justify-between bg-white/10 shadow backdrop-blur-sm border border-white/30">
         <span className="text-black text-lg font-semibold">
           Hi Jayesh Puri Goswami
         </span>
