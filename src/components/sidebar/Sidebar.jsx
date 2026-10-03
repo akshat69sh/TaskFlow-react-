@@ -9,7 +9,7 @@ import {
 
 function Sidebar() {
   return (
-    <aside className="w-64 rounded-3xl p-3 m-3 gap-5 bg-white/10 shadow-2xl backdrop-blur-xl border border-white/30 shadow-black/60 hidden  md:flex flex-col justify-start items-center">
+    <aside className="w-64 rounded-3xl p-3 m-3 gap-5 bg-white/30  shadow-sm border-white border-[0.5px] hidden  md:flex flex-col justify-start items-center">
       <div className="p-3 ">
         <span className="flex items-center justify-center text-3xl font-extrabold">
           Taskflow
@@ -39,20 +39,20 @@ function Sidebar() {
         </div>
         <div className="flex flex-col justify-evenly p-2.5 h-fit w-full gap-3   ">
           <NavLink to="/team">
-            <div className="flex w-full bg-transparent gap-2 items-center  ">
-              <UserGroup size={20} strokeWidth={1} />
+            <div className="flex w-full bg-transparent gap-2 items-center font-semibold   ">
+              <UserGroup size={20} strokeWidth={1.5} />
               <span className="text-lg">Team</span>
             </div>
           </NavLink>
           <NavLink to="/report">
-            <div className="flex w-full bg-transparent gap-2 items-center  ">
-              <ClipboardPlus size={20} strokeWidth={1} />
+            <div className="flex w-full bg-transparent gap-2 items-center font-semibold  ">
+              <ClipboardPlus size={20} strokeWidth={1.5} />
               <span className="text-lg">Report</span>
             </div>
           </NavLink>
           <NavLink to="/settings">
-            <div className="flex w-full bg-transparent gap-2 items-center  ">
-              <Settings size={20} strokeWidth={1} />
+            <div className="flex w-full bg-transparent gap-2 items-center font-semibold ">
+              <Settings size={20} strokeWidth={1.5} />
               <span className="text-lg">Settings</span>
             </div>
           </NavLink>

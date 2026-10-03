@@ -1,5 +1,5 @@
-import { Download, Plus } from "lucide-react";
-import Button from "./Button";
+import { Download, Plus, SlidersHorizontal } from "lucide-react";
+import Button from "../ui/Button";
 
 function PageHeading({ pageName, isButtonVisible }) {
   return (
@@ -10,6 +10,11 @@ function PageHeading({ pageName, isButtonVisible }) {
         </div>
         {isButtonVisible ? (
           <div className="flex space-x-4">
+            <Button
+              buttonIcon={<SlidersHorizontal />}
+              buttonText={"Customise"}
+              buttonClass={"gap-3 text-white"}
+            />
             <Button
               buttonIcon={<Download />}
               buttonText={"Export to excel"}
