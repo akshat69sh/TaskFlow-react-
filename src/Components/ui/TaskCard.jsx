@@ -8,9 +8,7 @@ function TaskCard({ children }) {
       {children}
       <div className="flex gap-2 flex-col">
         <TaskCardHeader
-          name={"akshat"}
-          count={20}
-          className={"bg-violet-200 text-violet-400"}
+         
         />
         <button className="flex justify-center w-full border border-black/20 rounded-2xl p-1 bg-white hover:cursor-pointer">
           <Plus color="#2c2a32" />
