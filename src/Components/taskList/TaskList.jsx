@@ -1,10 +1,9 @@
 import { Plus } from "lucide-react";
-import TaskCard from "../ui/TaskCard";
-import TaskCardHeader from "../ui/TaskCardHeader";
-import TaskItem from "../ui/TaskItem";
+import TaskCard from "../../Components/ui/TaskCard";
+import TaskCardHeader from "../../Components/ui/TaskCardHeader";
+import TaskItem from "../../Components/ui/TaskItem";
 
 function TaskList({ listType }) {
-    
   return (
     <>
       <TaskCard>
@@ -14,7 +13,7 @@ function TaskList({ listType }) {
             <Plus color="#2c2a32" />
             <span>add task</span>
           </button>
-          <TaskItem  />
+          <TaskItem />
         </div>
       </TaskCard>
     </>

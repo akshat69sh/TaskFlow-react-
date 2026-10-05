@@ -1,17 +1,21 @@
-
-function Button({buttonText, buttonType , buttonClass , buttonIcon , buttonOnClick}) {
+function Button({
+  buttonText,
+  buttonType,
+  buttonClass,
+  buttonIcon,
+  buttonOnClick,
+}) {
   return (
-    <button className={` px-5 py-3 rounded-full flex justify-center items-center hover:-translate-y-1 duration-300 transition-all hover:cursor-pointer ${buttonClass}`} onClick={buttonOnClick} buttonType={buttonType} > 
+    <button
+      className={` px-5 py-3 rounded-full flex justify-center items-center hover:-translate-y-1 duration-300 transition-all hover:cursor-pointer ${buttonClass}`}
+      onClick={buttonOnClick}
+      buttonType={buttonType}
+    >
+      {buttonIcon ? <span className=""> {buttonIcon} </span> : null}
 
-
-        {buttonIcon ? <span className=""> {buttonIcon} </span> : null}
-
-
-        <span>{buttonText}</span>
-
-
+      <span>{buttonText}</span>
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;

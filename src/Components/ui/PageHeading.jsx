@@ -1,7 +1,7 @@
 import { Download, Plus, SlidersHorizontal } from "lucide-react";
 import Button from "../ui/Button";
 
-function PageHeading({ pageName, isButtonVisible }) {
+function PageHeading({ pageName, isButtonVisible, buttonOnClick }) {
   return (
     <>
       <div className="flex justify-between">
@@ -24,6 +24,7 @@ function PageHeading({ pageName, isButtonVisible }) {
               buttonIcon={<Plus />}
               buttonText={"Create a new Task"}
               buttonClass={"bg-blue-500 text-white"}
+              buttonOnClick={buttonOnClick}
             />
           </div>
         ) : null}
