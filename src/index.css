@@ -10,3 +10,9 @@ body {
     background-position: center;
     height: 100vh;
 }
+
+@theme {
+  --font-delius: "Delius", cursive;
+  --font-Acme: "Acme", sans-serif;
+  --font-quantico: "Quantico", sans-serif;
+}

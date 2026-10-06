@@ -11,8 +11,8 @@ function TaskItem() {
           </button>
         </div>
         <div className="flex flex-col min-w-0 p-2">
-          <p className="text-black break-all "></p>
-          <p className="text-black/60"> </p>
+          <p className="text-black break-all font-delius font-extrabold"></p>
+          <p className="text-black/60 font-quantico">  </p>
         </div>
         <div className="flex flex-row gap-3 justify-end p-2">
           <span className="flex gap-1">

@@ -7,7 +7,7 @@ function Button({
 }) {
   return (
     <button
-      className={` px-5 py-3 rounded-full flex justify-center items-center hover:-translate-y-1 duration-300 transition-all hover:cursor-pointer ${buttonClass}`}
+      className={` px-5   flex justify-center items-center hover:-translate-y-1 duration-300 transition-all hover:cursor-pointer  ${buttonClass}`}
       onClick={buttonOnClick}
       buttonType={buttonType}
     >

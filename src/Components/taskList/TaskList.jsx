@@ -9,9 +9,9 @@ function TaskList({ listType }) {
       <TaskCard>
         <div className="flex gap-2 flex-col">
           <TaskCardHeader listTypeHeader={listType} />
-          <button className="flex justify-center w-full border border-black/20 rounded-2xl p-1 bg-white hover:cursor-pointer">
+          <button className="flex justify-center w-full border border-black/20 rounded-2xl p-1 bg-white hover:cursor-pointer font-Acme gap-3">
             <Plus color="#2c2a32" />
-            <span>add task</span>
+            <span>Add task</span>
           </button>
           <TaskItem />
         </div>

@@ -78,19 +78,19 @@ function TaskCardHeader({ listTypeHeader }) {
   return (
     <>
       <div
-        className={`flex justify-between p-3 items-center rounded-full  ${color} `}
+        className={`flex justify-between px-2 py-1 items-center rounded-full font-Acme font-medium text-xl ${color} `}
       >
-        <div className="flex gap-2 item-center">
+        <div className="flex gap-3 items-center justify-center">
           <span
-            className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-medium text-white ${badgeBg}`}
+            className={`w-5 h-5 rounded-full flex items-center justify-center text-xl font-medium text-white ${badgeBg}`}
           >
             {1}
           </span>
-          <span className={`text-sm font-medium `}>
+          <span className={`text-medium font-medium `}>
             {headerTitle}
           </span>
         </div>
-        <button className="text-xl flex items-center hover:cursor-pointer p-0.5">
+        <button className="text-xl flex items-center hover:cursor-pointer px-2">
           <Plus size={18} color={iconColor} />
         </button>
       </div>
