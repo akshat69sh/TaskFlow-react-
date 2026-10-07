@@ -8,9 +8,11 @@ import AddTask from "../Components/ui/AddTask";
 // import TaskItem from "../components/ui/TaskItem";
 
 function Home() {
-  const [isWindowOpen, setIsWindowOpen] = useState(false);
+
+  const [isWindowOpen, setIsWindowOpen] = useState(false)
+
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full relative">
       <PageHeading
         pageName="Home"
         isButtonVisible={true}
@@ -23,7 +25,7 @@ function Home() {
         <TaskList listType="doing" />
         <TaskList listType="done" />
       </div>
-      <AddTask />
+      {isWindowOpen && <AddTask onClose={()=> setIsWindowOpen(false)} />}
     </div>
   );
 }

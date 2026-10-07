@@ -8,8 +8,16 @@ import Report from "./pages/Report";
 import Settings from "./pages/Settings";
 import Notifications from "./pages/Notifications";
 import Messages from "./pages/Messages";
+import { useEffect } from "react";
 
 function App() {
+
+  useEffect(()=> {
+    if (!localStorage.getItem("TaskArray")) {
+      localStorage.setItem("TaskArray", JSON.stringify([]))
+    }
+  })
+
   return (
     <>
       <Routes>
