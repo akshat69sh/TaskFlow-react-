@@ -57,17 +57,17 @@ function TaskCardHeader({ listTypeHeader }) {
       setColor("bg-indigo-200");
       setBadgeBg("bg-indigo-600");
       setIconColor("indigo");
-    }else if (listTypeHeader === "ready") {
+    } else if (listTypeHeader === "ready") {
       setHeaderTitle("Ready");
       setColor("bg-amber-200");
       setBadgeBg("bg-amber-500");
       setIconColor("orange");
-    }else if (listTypeHeader === "doing") {
+    } else if (listTypeHeader === "doing") {
       setHeaderTitle("Doing");
       setColor("bg-emerald-200");
       setBadgeBg("bg-emerald-600");
       setIconColor("green");
-    }else if (listTypeHeader === "done") {
+    } else if (listTypeHeader === "done") {
       setHeaderTitle("Done");
       setColor("bg-green-300");
       setBadgeBg("bg-green-600");
@@ -78,20 +78,20 @@ function TaskCardHeader({ listTypeHeader }) {
   return (
     <>
       <div
-        className={`flex justify-between px-2 py-1 items-center rounded-full font-Acme font-medium text-xl ${color} `}
+        className={`flex justify-between px-3 py-1.5 items-center rounded-full font-Acme font-medium text-base sm:text-lg ${color}`}
       >
-        <div className="flex gap-3 items-center justify-center">
+        <div className="flex gap-2 sm:gap-3 items-center justify-center">
           <span
-            className={`w-5 h-5 rounded-full flex items-center justify-center text-xl font-medium text-white ${badgeBg}`}
+            className={`w-5 h-5 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium text-white ${badgeBg}`}
           >
             {1}
           </span>
-          <span className={`text-medium font-medium `}>
+          <span className="text-sm sm:text-base font-medium">
             {headerTitle}
           </span>
         </div>
-        <button className="text-xl flex items-center hover:cursor-pointer px-2">
-          <Plus size={18} color={iconColor} />
+        <button className="text-xl flex items-center hover:cursor-pointer px-1">
+          <Plus size={16} color={iconColor} />
         </button>
       </div>
     </>

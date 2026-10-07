@@ -1,31 +1,26 @@
-// import { Plus } from "lucide-react";
 import { useState } from "react";
 import TaskList from "../Components/taskList/TaskList";
 import PageHeading from "../Components/ui/PageHeading";
 import AddTask from "../Components/ui/AddTask";
-// import TaskCard from "../Components/ui/TaskCard";
-// import TaskCardHeader from "../components/ui/TaskCardHeader";
-// import TaskItem from "../components/ui/TaskItem";
 
 function Home() {
-
-  const [isWindowOpen, setIsWindowOpen] = useState(false)
+  const [isWindowOpen, setIsWindowOpen] = useState(false);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex flex-col">
       <PageHeading
         pageName="Home"
         isButtonVisible={true}
         buttonOnClick={() => setIsWindowOpen(true)}
       />
 
-      <div className="flex gap-5 mt-5 justify-around w-full  items-center  ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 mt-5 w-full items-start p-5">
         <TaskList listType="todo" />
         <TaskList listType="ready" />
         <TaskList listType="doing" />
         <TaskList listType="done" />
       </div>
-      {isWindowOpen && <AddTask onClose={()=> setIsWindowOpen(false)} />}
+      {isWindowOpen && <AddTask onClose={() => setIsWindowOpen(false)} />}
     </div>
   );
 }

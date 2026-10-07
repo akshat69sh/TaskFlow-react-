@@ -9,7 +9,7 @@ import {
 
 function Sidebar() {
   return (
-    <aside className="w-64 rounded-3xl p-3 m-3 gap-5 bg-white/30  shadow-sm border-white border-[0.5px] hidden  md:flex flex-col justify-start items-center">
+    <aside className="w-64 shrink-0 rounded-3xl p-3 m-3 gap-5 bg-white/30  shadow-sm border-white border-[0.5px] hidden  md:flex flex-col justify-start items-center">
       <div className="p-3 ">
         <span className="flex items-center justify-center text-3xl font-extrabold font-stretch-50% font-mono">
           Taskflow
