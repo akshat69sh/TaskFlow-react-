@@ -5,6 +5,7 @@ import { Plus, X } from "lucide-react";
 function AddTask({ onClose }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setDescription] = useState("");
+  const [priority,setPriority] = useState("normal")
   const [isError, setIsError] = useState(false);
   const [isDescError, setIsDescError] = useState(false);
 
@@ -29,11 +30,13 @@ function AddTask({ onClose }) {
       return;
     }
 
+
+
     localStorage.setItem(
       "TaskArray",
       JSON.stringify([
         ...JSON.parse(localStorage.getItem("TaskArray") || "[]"),
-        { title: taskTitle, description: taskDescription },
+        { title: taskTitle, description: taskDescription, priority: priority },
       ]),
     );
     onClose();
@@ -84,17 +87,19 @@ function AddTask({ onClose }) {
           </span>
         )}
 
-        <div className="flex flex-wrap sm:flex-nowrap gap-5">
+        <div className="flex flex-wrap w-fu sm:flex-wrap gap-5">
           <div>
             <select
               id="priority"
               name="priority"
-              defaultValue="normal"
+              
+              value={priority}
+              onChange={(e) => setPriority(e.target.value)}
               className="px-4 py-2 rounded-2xl font-quantico bg-white/70 border border-white/60 text-zinc-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 hover:cursor-pointer"
             >
-              <option value="urgent">urgent</option>
-              <option value="medium">medium</option>
-              <option value="normal">normal</option>
+              <option value="urgent" >urgent</option>
+              <option value="medium" >medium</option>
+              <option value="normal" >normal</option>
             </select>
           </div>
           <Button
