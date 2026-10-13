@@ -45,20 +45,3 @@ function Home() {
 
 export default Home;
 
-{
-  /* <TaskCard>
-          <div className="flex gap-2 flex-col">
-            <TaskCardHeader headerTitle="todo" color="" />
-            <button className="flex justify-center w-full border border-black/20 rounded-2xl p-1 bg-white hover:cursor-pointer">
-              <Plus color="#2c2a32" />
-              <span>add task</span>
-            </button>
-          </div>
-          <div className="flex flex-col gap-2">
-            <TaskItem />
-            <TaskItem />
-            <TaskItem />
-            <TaskItem />
-          </div>
-        </TaskCard> */
-}
