@@ -11,7 +11,9 @@ function AddTask({ onClose }) {
 
   const id = useId()
 
-  const timeStamp = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
+  const now = new Date();
+  const timeStamp = now.toLocaleTimeString("en-GB", { hour12: false });
+  const dateStamp = now.toLocaleDateString("en-GB");
 
   const handleAddTask = () => {
 
@@ -40,11 +42,13 @@ function AddTask({ onClose }) {
       "TaskArray",
       JSON.stringify([
         ...JSON.parse(localStorage.getItem("TaskArray") || "[]"),
-        { title: taskTitle, description: taskDescription, priority: priority, id: id , status : "todo", timeStamp : timeStamp },
+        { title: taskTitle, description: taskDescription, priority: priority, id: id , status : "todo", timeStamp : timeStamp ,dateStamp : dateStamp },
       ]),
     );
     onClose();
   };
+
+  
 
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex justify-center items-center bg-black/50 backdrop-blur-sm z-50 p-4">
@@ -101,9 +105,9 @@ function AddTask({ onClose }) {
               onChange={(e) => setPriority(e.target.value)}
               className="px-4 py-2 rounded-2xl font-quantico bg-white/70 border border-white/60 text-zinc-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 hover:cursor-pointer"
             >
-              <option value="urgent" >urgent</option>
-              <option value="medium" >medium</option>
-              <option value="normal" >normal</option>
+              <option value="urgent" className="bg-white text-red-600" >urgent</option>
+              <option value="medium" className="bg-white text-amber-700" >medium</option>
+              <option value="normal" className="bg-white text-blue-600" >normal</option>
             </select>
           </div>
           <Button
