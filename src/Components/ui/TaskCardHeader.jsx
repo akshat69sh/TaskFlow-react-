@@ -44,7 +44,6 @@ function TaskCardHeader({ listTypeHeader }) {
   //     classname: "bg-green-300"
   //   },
   // ];
-  console.log(listTypeHeader);
 
   const [headerTitle, setHeaderTitle] = useState(listTypeHeader);
   const [color, setColor] = useState("bg-indigo-200");

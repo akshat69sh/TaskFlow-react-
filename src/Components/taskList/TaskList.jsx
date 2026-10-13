@@ -4,18 +4,28 @@ import TaskCardHeader from "../../Components/ui/TaskCardHeader";
 import TaskItem from "../../Components/ui/TaskItem";
 import AddTask from "../ui/AddTask";
 
-function TaskList({ listType }) {
+function TaskList({ listType, data }) {
+  // console.log(data);
+
   return (
     <>
       <TaskCard>
         <div className="flex gap-2 flex-col w-full">
           <TaskCardHeader listTypeHeader={listType} />
-          <button className="flex justify-center items-center w-full border border-black/20 rounded-2xl p-1.5 sm:p-2 bg-white hover:cursor-pointer font-Acme gap-2 sm:gap-3 text-sm sm:text-base hover:bg-white/80 transition-colors" >
+          <button className="flex justify-center items-center w-full border border-black/20 rounded-2xl p-1.5 sm:p-2 bg-white hover:cursor-pointer font-Acme gap-2 sm:gap-3 text-sm sm:text-base hover:bg-white/80 transition-colors">
             <Plus color="#2c2a32" size={18} />
             <span>Add task</span>
           </button>
-          
-          <TaskItem  />
+
+          {data.length === 0 ? (
+            <div className="flex justify-center items-center ">
+              <span className="text-red-50 text-2xl"> No task in this list </span>
+            </div>
+          ) : (
+            data?.map((task) => {
+              return <TaskItem task={task} />;
+            })
+          )}
         </div>
       </TaskCard>
     </>

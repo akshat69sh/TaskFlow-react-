@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useId } from "react";
 import Button from "../../components/ui/Button";
 import { Plus, X } from "lucide-react";
 
@@ -8,6 +8,10 @@ function AddTask({ onClose }) {
   const [priority,setPriority] = useState("normal")
   const [isError, setIsError] = useState(false);
   const [isDescError, setIsDescError] = useState(false);
+
+  const id = useId()
+
+  const timeStamp = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
 
   const handleAddTask = () => {
 
@@ -36,7 +40,7 @@ function AddTask({ onClose }) {
       "TaskArray",
       JSON.stringify([
         ...JSON.parse(localStorage.getItem("TaskArray") || "[]"),
-        { title: taskTitle, description: taskDescription, priority: priority },
+        { title: taskTitle, description: taskDescription, priority: priority, id: id , status : "todo", timeStamp : timeStamp },
       ]),
     );
     onClose();
