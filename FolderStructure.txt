@@ -1,0 +1,74 @@
+
+server/
+│
+├── src/
+│   ├── config/
+│   │   ├── db.js
+│   │   ├── cloudinary.js
+│   │   └── multer.js
+│   │
+│   ├── models/
+│   │   ├── user.model.js
+│   │   ├── todo.model.js
+│   │   ├── todoStatus.model.js
+│   │   ├── activeTodo.model.js
+│   │   ├── friendship.model.js
+│   │   ├── todoShare.model.js
+│   │   ├── todoHistory.model.js
+│   │   └── notification.model.js
+│   │
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   ├── user.controller.js
+│   │   ├── todo.controller.js
+│   │   ├── friend.controller.js
+│   │   ├── share.controller.js
+│   │   ├── history.controller.js
+│   │   └── notification.controller.js
+│   │
+│   ├── services/
+│   │   ├── auth.service.js
+│   │   ├── user.service.js
+│   │   ├── todo.service.js
+│   │   ├── friend.service.js
+│   │   ├── share.service.js
+│   │   ├── history.service.js
+│   │   └── notification.service.js
+│   │
+│   ├── routes/
+│   │   ├── index.js
+│   │   ├── auth.routes.js
+│   │   ├── user.routes.js
+│   │   ├── todo.routes.js
+│   │   ├── friend.routes.js
+│   │   ├── share.routes.js
+│   │   ├── history.routes.js
+│   │   └── notification.routes.js
+│   │
+│   ├── middlewares/
+│   │   ├── auth.middleware.js
+│   │   ├── error.middleware.js
+│   │   ├── validate.middleware.js
+│   │   └── upload.middleware.js
+│   │
+│   ├── utils/
+│   │   ├── apiError.js
+│   │   ├── apiResponse.js
+│   │   ├── asyncHandler.js
+│   │   └── generateToken.js
+│   │
+│   ├── validators/
+│   │   ├── auth.validator.js
+│   │   ├── todo.validator.js
+│   │   └── friend.validator.js
+│   │
+│   ├── constants/
+│   │   └── index.js
+│   │
+│   └── app.js
+│
+├── .env
+├── .gitignore
+├── index.js
+├── package.json
+└── package-lock.json
